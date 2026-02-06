@@ -35,7 +35,7 @@
   <div class="col">
     <label for="inputState" class="form-label">State</label>
     <select id="inputState" class="form-select">
-      <option value="" disabled selected>Select State (Michigan)</option>
+      <option value="" disabled selected>Michigan</option>
       <option>Arizona</option>
       <option>California</option>
       <option>Michigan</option>
