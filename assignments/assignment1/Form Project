@@ -23,18 +23,17 @@
   </div>
 </div>
 
-  <div class="col-12">
+  <div class="col">
     <label for="inputAddress" class="form-label">Address</label>
     <input type="text" class="form-control" id="inputAddress">
   </div>
-  <div class="col-md-6">
+  <div class="col">
     <label for="inputCity" class="form-label">City</label>
     <input type="text" class="form-control" id="inputCity">
   </div>
-  <div class="col-md-4">
+  <div class="col">
     <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option selected>Michigan</option>
+    <select id="inputState" class="form-select" placeholder="Michigan">
       <option>Arizona</option>
       <option>California</option>
       <option>Michigan</option>
