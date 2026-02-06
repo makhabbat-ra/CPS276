@@ -22,18 +22,20 @@
     <input type="text" class="form-control" aria-label="Last name">
   </div>
 </div>
-<div class="row g-3">
+
   <div class="col">
     <label for="inputAddress" class="form-label">Address</label>
     <input type="text" class="form-control" id="inputAddress">
   </div>
+<div class="row g-3">
   <div class="col">
     <label for="inputCity" class="form-label">City</label>
     <input type="text" class="form-control" id="inputCity">
   </div>
   <div class="col">
     <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select" aria-placeholder="Michigan">
+    <select id="inputState" class="form-select">
+      <option selected>Michigan</option>
       <option>Arizona</option>
       <option>California</option>
       <option>Michigan</option>
@@ -41,11 +43,11 @@
       <option>Pensilvania</option>
     </select>
   </div>
-</div>
   <div class="col-md-2">
     <label for="inputZip" class="form-label">Zip</label>
     <input type="text" class="form-control" id="inputZip">
   </div>
+</div>
   <div class="col-md-6">
     <label for="phone" class="form-label">Phone</label>
     <input type="tel" id="phone" name="phone" class="form-control">
