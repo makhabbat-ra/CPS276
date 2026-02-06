@@ -6,7 +6,7 @@
     <title>Form Project</title>
 </head>
 <body class="container mt-4">
-    <form method="post" action="#" novalidate>
+    <form method="post" action="#">
     
 <div class="row g-3">
   <div class="col">
