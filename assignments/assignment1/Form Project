@@ -34,10 +34,10 @@
   </div>
   <div class="col">
     <label for="inputState" class="form-label">State</label>
-    <select id="inputState" class="form-select">
-      <option>Michigan</option>
-      <option>California</option>
+    <select id="inputState" class="form-select" placeholder="Michigan" aria-label="Michigan">
       <option>Arizona</option>
+      <option>California</option>
+      <option>Michigan</option>
       <option>Ohio</option>
       <option>Pensilvania</option>
     </select>
