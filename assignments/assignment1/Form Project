@@ -49,10 +49,12 @@
   </div>
 </div>
   <div class="col g-3">
+    <div class="col">
     <label for="phone" class="form-label">Phone</label>
     <input type="tel" id="phone" name="phone" class="form-control">
+    </div>
   </div>
-  <div class="col-md-6">
+  <div class="col">
     <label for="inputEmail4" class="form-label">Email</label>
     <input type="email" class="form-control" id="inputEmail4">
   </div>
