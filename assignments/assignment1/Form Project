@@ -40,7 +40,7 @@
     <label for="state" class="form-label">State</label>
     <select id="state" name="state" class="form-select" required>
 
-      <option value="" disabled selected>Select State (Michigan)</option>
+      <option value="" disabled selected>Michigan</option>
 
       <option value="CA">California</option>
       <option value="FL">Florida</option>
