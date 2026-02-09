@@ -62,21 +62,17 @@
 <div class="mb-4">
             <label class="col-form-label pt-0">Preferred method of contact</label>
             <div class="d-flex flex-row mb-3">
-              <div class="col">
             <div class="form-check">
                 <input class="form-check-input" type="radio" name="contactMethod" id="contactEmail" value="email" required>
                 <label class="form-check-label" for="contactEmail">
                     Email
                 </label>
             </div>
-            </div>
-            <div class="col">
              <div class="form-check">
                 <input class="form-check-input" type="radio" name="contactMethod" id="contactText" value="text" required>
                 <label class="form-check-label" for="contactText">
                     Text
                 </label>
-            </div>
             </div>
             </div>
 </div>
