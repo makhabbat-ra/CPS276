@@ -51,7 +51,7 @@ function createTable($rows, $columns) {
 
 <body class="container">
     <?php
-        echo $evenNumbers;
+        echo "Even Numbers: ", $evenNumbers;
         echo $form;
         echo createTable(8, 6);
     ?>
