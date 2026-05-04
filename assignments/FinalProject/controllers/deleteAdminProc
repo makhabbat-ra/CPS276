@@ -1,0 +1,34 @@
+<?php
+session_start();
+
+require_once __DIR__ . '/../classes/Db_conn.php';
+require_once __DIR__ . '/../classes/Pdo_methods.php';
+
+if (!isset($_SESSION['admin_id']) || !isset($_SESSION['status']) || $_SESSION['status'] !== 'admin') {
+    header('Location: ../index.php?page=login');
+    exit;
+}
+
+$ids = $_POST['delete_ids'] ?? [];
+
+if (empty($ids) || !is_array($ids)) {
+    // Nothing selected — just reload the page
+    header('Location: ../index.php?page=deleteAdmins');
+    exit;
+}
+
+$cleanIds = array_map('intval', $ids);
+$placeholders = implode(',', array_fill(0, count($cleanIds), '?'));
+$sql = "DELETE FROM admins WHERE id IN ($placeholders)";
+
+$pdo = new Pdo_methods();
+$result = $pdo->other($sql, $cleanIds);
+
+if ($result === 'error') {
+    $_SESSION['delete_admins_error'] = 'Could not delete the admins';
+} else {
+    $_SESSION['delete_admins_success'] = 'Admin(s) deleted';
+}
+
+header('Location: ../index.php?page=deleteAdmins');
+exit;
