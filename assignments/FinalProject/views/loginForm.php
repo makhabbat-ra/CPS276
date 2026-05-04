@@ -1,18 +1,14 @@
 <?php
-// views/loginform.php
 if (!isset($_SESSION)) session_start();
 
-// If already logged in, redirect to welcome
 if (isset($_SESSION['admin_id'])) {
     header('Location: index.php?page=welcome');
     exit;
 }
 
-// Retrieve sticky data and errors
 $old = $_SESSION['login_data'] ?? ['email' => ''];
 $errors = $_SESSION['login_errors'] ?? [];
 
-// Clear flash data so it doesn't persist after render
 unset($_SESSION['login_errors'], $_SESSION['login_data']);
 ?>
 <!doctype html>
@@ -23,7 +19,6 @@ unset($_SESSION['login_errors'], $_SESSION['login_data']);
   <title>Login</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Keep the form narrow and aligned to the left inside the card */
     .login-card {
       max-width: 480px;
     }
@@ -37,10 +32,8 @@ unset($_SESSION['login_errors'], $_SESSION['login_data']);
       margin-bottom: 1rem;
     }
 
-    /* ---------- ADDED: make the card fill the entire viewport ---------- */
-    /* Only CSS changes below — nothing else in the file was modified. */
+    
     .login-card {
-      /* allow the card to expand to full viewport */
       position: fixed;
       top: 0;
       left: 0;
@@ -51,18 +44,16 @@ unset($_SESSION['login_errors'], $_SESSION['login_data']);
       max-width: none;
       margin: 0;
       padding: 0;
-      background: #ffffff; /* keep background white to match page */
+      background: #ffffff; 
       border: none;
       box-shadow: none;
       box-sizing: border-box;
-      overflow: auto; /* in case content exceeds viewport on small screens */
+      overflow: auto; 
     }
 
-    /* keep the inner padding so the form doesn't touch the edges */
     .login-card .card-body {
       padding: 2rem;
     }
-    /* ------------------------------------------------------------------- */
   </style>
 </head>
 <body class="bg-light">

@@ -18,22 +18,18 @@ $data = [
   'status'=> $status
 ];
 
-// NAME
 if ($name === '' || !$val->checkFormat($name, 'name')) {
   $errors['name'] = 'Name must contain only letters, hyphens, apostrophes, and spaces';
 }
 
-// EMAIL
 if ($email === '' || !$val->checkFormat($email, 'email')) {
   $errors['email'] = 'Enter a valid email address';
 }
 
-// PASSWORD
 if ($password === '' || !$val->checkFormat($password, 'password')) {
   $errors['password'] = 'Password must be at least 8 characters, include an uppercase letter, a number, and a special character';
 }
 
-// STATUS
 if ($status !== 'staff' && $status !== 'admin') {
   $errors['status'] = 'Select a valid status';
 }
@@ -85,3 +81,4 @@ unset($_SESSION['admin_data']);
 $_SESSION['admin_success'] = 'Admin Added';
 header('Location: ../index.php?page=addAdmin');
 exit;
+

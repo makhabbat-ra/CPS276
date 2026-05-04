@@ -1,14 +1,11 @@
 <?php
-// Views/welcome.php
 if (!isset($_SESSION)) session_start();
 
-// If not logged in, redirect to login
 if (!isset($_SESSION['admin_id'])) {
     header('Location: index.php?page=login');
     exit;
 }
 
-// Get user name and status
 $name = $_SESSION['name'] ?? 'User';
 $status = $_SESSION['status'] ?? 'staff';
 ?>
@@ -28,11 +25,10 @@ $status = $_SESSION['status'] ?? 'staff';
       background: #ffffff;
     }
 
-    /* Make the card fill the entire page */
     .fullpage-card {
-      height: 100vh;      /* full viewport height */
-      width: 100%;        /* full width */
-      border-radius: 0;   /* remove rounded corners */
+      height: 100vh;      
+      width: 100%;        
+      border-radius: 0;   
     }
   </style>
 </head>

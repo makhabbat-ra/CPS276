@@ -19,47 +19,38 @@ $data = [
 
 $errors = [];
 
-// First name
 if (!$val->checkFormat($data['fname'], 'name')) {
     $errors['fname'] = 'You must enter a first name and it must be alpha characters only.';
 }
 
-// Last name
 if (!$val->checkFormat($data['lname'], 'name')) {
     $errors['lname'] = 'You must enter a last name and it must be alpha characters only.';
 }
 
-// Address (no pattern, so use 'none')
 if (!$val->checkFormat($data['address'], 'none')) {
     $errors['address'] = 'Invalid address';
 }
 
-// City (letters only)
 if (!$val->checkFormat($data['city'], 'name')) {
     $errors['city'] = 'Invalid city';
 }
 
-// Phone (you need a pattern — but for now use none)
 if (!$val->checkFormat($data['phone'], 'none')) {
     $errors['phone'] = 'Phone must be 999.999.9999';
 }
 
-// Email
 if (!$val->checkFormat($data['email'], 'email')) {
     $errors['email'] = 'Invalid email';
 }
 
-// DOB (no pattern in your class — so use none)
 if (!$val->checkFormat($data['dob'], 'none')) {
     $errors['dob'] = 'DOB must be mm/dd/yyyy';
 }
 
-// State
 if ($data['state'] === '') {
     $errors['state'] = 'Select a state';
 }
 
-// Age
 if ($data['age'] === '') {
     $errors['age'] = 'You must select an age range';
 }
